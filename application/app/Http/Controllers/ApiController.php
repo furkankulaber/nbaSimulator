@@ -89,9 +89,13 @@ class ApiController extends Controller
                 $return['player'][$pos->attacking_player]['attack'] = 1;
             }
             if (isset($return['player'][$pos->assist_player]['assist'])) {
-                $return['player'][$pos->assist_player]['assist']++;
+                if(pos->score > 0) {
+                    $return['player'][$pos->assist_player]['assist']++;
+                }
             } else {
-                $return['player'][$pos->assist_player]['assist'] = 1;
+                if(pos->score > 0) {
+                    $return['player'][$pos->assist_player]['assist'] = 1;
+                }
             }
             if (isset($return['player'][$pos->attacking_player]['b_' . $pos->score])) {
                 $return['player'][$pos->attacking_player]['b_' . $pos->score]++;
