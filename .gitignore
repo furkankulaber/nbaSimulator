@@ -5,5 +5,6 @@
 /application/vendor/
 mysql
 .idea
+.DS_Store
 
 ###< symfony/framework-bundle ###
